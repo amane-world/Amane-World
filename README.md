@@ -2,4 +2,4 @@
 
 # Amane-World
 
-## 分散型仮想世界
+## 分散型仮想世界 [Fediverse + Metaverse]

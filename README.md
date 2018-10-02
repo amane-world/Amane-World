@@ -3,3 +3,6 @@
 # Amane-World
 
 ## 分散型仮想世界 [Fediverse + Metaverse]
+
+- ## 半永久的な通貨の保護
+- ## 移住の自由

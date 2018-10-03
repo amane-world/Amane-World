@@ -12,6 +12,7 @@ namespace Time
       timer.Elapsed += (sender, e) =>
                   {
                     /* ToDo */
+                    /* TimeCycle.tick */
                   };
       timer.Start();
     }

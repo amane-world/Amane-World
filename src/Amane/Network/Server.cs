@@ -8,12 +8,14 @@ namespace Network
   {
     public AmaneServer()
     {
+      string max = Environment.GetEnvironmentVariable("MaximumNumberOfConnections");
       this.Configuration.Backlog = 100;
       this.Configuration.Port = 29265;
-      this.Configuration.MaximumNumberOfConnections = 100;
+      this.Configuration.MaximumNumberOfConnections = Int32.Parse(Environment.GetEnvironmentVariable("MaximumNumberOfConnections"));
       this.Configuration.Host = "127.0.0.1";
       this.Configuration.BufferSize = 8;
-      this.Configuration.Blocking = true;
+      this.Configuration.Blocking = false;
+      Log.info($"最大同時接続: {max}");
     }
 
     protected override void Initialize()
@@ -24,7 +26,6 @@ namespace Network
     protected override void OnClientConnected(Client connection)
     {
       Log.info($"New client[{connection.Id.ToString()}] connected!");
-
       connection.SendFirstPacket();
     }
 

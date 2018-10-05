@@ -6,9 +6,6 @@ namespace Network
 {
   internal sealed class Client : NetUser
   {
-    /// <summary>
-    /// Send hello to the incoming clients.
-    /// </summary>
     public void SendFirstPacket()
     {
       using (var packet = new NetPacket())
@@ -19,10 +16,6 @@ namespace Network
       }
     }
 
-    /// <summary>
-    /// Receive messages from the client.
-    /// </summary>
-    /// <param name="packet"></param>
     public override void HandleMessage(INetPacketStream packet)
     {
       var value = packet.Read<string>();

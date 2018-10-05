@@ -3,11 +3,11 @@ using System.Threading;
 using Logger;
 using Time;
 using Network;
+using dotenv.net;
 
 public class Amane
 {
   public const string version = "0.1.0";
-  public static int coreCount = System.Environment.ProcessorCount;
 
   static void Main(string[] args)
   {
@@ -17,7 +17,10 @@ public class Amane
     Log.info($"|    version: {version}     |");
     Log.info("=========================");
     Log.info("天音システムを起動しています...");
-    Log.info($"{coreCount}コアに最適化して実行されます...");
+    Log.info($"{System.Environment.ProcessorCount}コアに最適化して実行されます...");
+    Log.info("Configの起動を開始します...");
+    DotEnv.Config();
+    Log.info("Configの起動が完了しました...");
     Log.info("Tickerの起動を開始します...");
     Clock.Ticking();
     Log.info("Tickerの起動が完了しました...");

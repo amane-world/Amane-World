@@ -28,7 +28,7 @@ public class Amane
     AmaneServer server = new AmaneServer();
     server.Start();
     Log.info("TCP Serverの起動が完了しました...");
-
+    World.GenerateFlat();
     while (true)
     {
       string command = Console.ReadLine();

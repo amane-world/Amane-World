@@ -8,6 +8,7 @@ using dotenv.net;
 public class Amane
 {
   public const string version = "0.1.0";
+  public const int chunkVersion = 1;
 
   static void Main(string[] args)
   {
@@ -28,7 +29,18 @@ public class Amane
     AmaneServer server = new AmaneServer();
     server.Start();
     Log.info("TCP Serverの起動が完了しました...");
-    World.GenerateFlat();
+
+    for (int x = 0; x < 9; x++)
+    {
+      for (int y = 0; y < 9; y++)
+      {
+        for (int z = 0; z < 9; z++)
+        {
+          World.GenerateFlat(x, y, z);
+        }
+      }
+    }
+
     while (true)
     {
       string command = Console.ReadLine();

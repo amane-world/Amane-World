@@ -8,6 +8,7 @@ namespace Time
     public static void Ticking()
     {
       /* 1tick = 1sec */
+      /* 1day = 2.4hour */
 
       timer.Elapsed += (sender, e) =>
                   {

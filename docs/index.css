@@ -41,5 +41,13 @@ html, body {
   width: 100vw;
   height: 80vh;
   position: absolute;
-  top: 120vh;
+  padding-top: 20vh;
+  top: 100vh;
+  font-weight: 100;
+  background-color: #00ccff;
+}
+
+#philosophy {
+  color: white;
+  font-size: 2em;
 }

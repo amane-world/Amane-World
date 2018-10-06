@@ -3,6 +3,7 @@ using System.Threading;
 using Logger;
 using Time;
 using Network;
+using Packet;
 using dotenv.net;
 
 public class Amane
@@ -36,10 +37,15 @@ public class Amane
     while (true)
     {
       string command = Console.ReadLine();
-      if (command == "exit")
+      switch (command.Split(" ")[0])
       {
-        Amane.exit();
-        break;
+        case "exit":
+          Amane.exit();
+          break;
+        case "say":
+          var sayPacket = new SayPacket(command.Split(" ")[1]);
+          server.SendToAll(sayPacket.packet);
+          break;
       }
     }
   }

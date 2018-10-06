@@ -2,7 +2,7 @@ using System.Timers;
 using Logger;
 namespace Time
 {
-  class Clock
+  public class Clock
   {
     public static Timer timer = new Timer(100);
     public static void Ticking()

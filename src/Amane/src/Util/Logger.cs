@@ -2,7 +2,7 @@ using System;
 
 namespace Logger
 {
-  class Log
+  public class Log
   {
     private const string LogTimeFormat = "yyyy-MM-dd h:mm:ss";
 

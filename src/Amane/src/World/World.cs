@@ -13,7 +13,7 @@ class World
       for (int i = 0; i < 4096; i++)
       {
         Blocks.Add(new NbtCompound(i.ToString()) {
-          new NbtInt("BlockPos", i),
+          new NbtFloat("BlockPos", i),
           new NbtInt("BlockID", 1),
         });
       }

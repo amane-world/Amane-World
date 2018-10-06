@@ -22,7 +22,8 @@ public class Amane
     Log.info($"|   codename: {codename}    |");
     Log.info("=========================");
     Log.info("天音システムを起動しています...");
-    Log.info($"{System.Environment.ProcessorCount}コアに最適化して実行されます...");
+    Log.warn("天音システムはまだ不完全です");
+    Log.warn("自己責任での利用をお願いします");
     Log.info("Configの起動を開始します...");
     DotEnv.Config();
     Log.info("Configの起動が完了しました...");
@@ -32,7 +33,7 @@ public class Amane
     Log.info("TCP Serverの起動を開始します...");
     AmaneServer server = new AmaneServer();
     server.Start();
-    Log.info("TCP Serverの起動が完了しました...");
+    Log.info("TCP Serverの起動が完了しました");
 
     while (true)
     {

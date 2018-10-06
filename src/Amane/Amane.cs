@@ -8,7 +8,9 @@ using dotenv.net;
 public class Amane
 {
   public const string version = "0.1.0";
+  public const string codename = "sumire";
   public const int chunkVersion = 1;
+
 
   static void Main(string[] args)
   {
@@ -16,6 +18,7 @@ public class Amane
     Log.info("=========================");
     Log.info("|         Amane         |");
     Log.info($"|    version: {version}     |");
+    Log.info($"|   codename: {codename}    |");
     Log.info("=========================");
     Log.info("天音システムを起動しています...");
     Log.info($"{System.Environment.ProcessorCount}コアに最適化して実行されます...");
@@ -29,17 +32,6 @@ public class Amane
     AmaneServer server = new AmaneServer();
     server.Start();
     Log.info("TCP Serverの起動が完了しました...");
-
-    // for (int x = -2; x < 3; x++)
-    // {
-    //   for (int y = -2; y < 3; y++)
-    //   {
-    //     for (int z = -2; z < 3; z++)
-    //     {
-    //       World.GenerateFlat(x, y, z);
-    //     }
-    //   }
-    // }
 
     while (true)
     {

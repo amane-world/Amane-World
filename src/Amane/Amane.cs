@@ -30,16 +30,16 @@ public class Amane
     server.Start();
     Log.info("TCP Serverの起動が完了しました...");
 
-    for (int x = 0; x < 9; x++)
-    {
-      for (int y = 0; y < 9; y++)
-      {
-        for (int z = 0; z < 9; z++)
-        {
-          World.GenerateFlat(x, y, z);
-        }
-      }
-    }
+    // for (int x = -2; x < 3; x++)
+    // {
+    //   for (int y = -2; y < 3; y++)
+    //   {
+    //     for (int z = -2; z < 3; z++)
+    //     {
+    //       World.GenerateFlat(x, y, z);
+    //     }
+    //   }
+    // }
 
     while (true)
     {

@@ -5,13 +5,14 @@ using Time;
 using Network;
 using Packet;
 using dotenv.net;
+using fNbt;
 
 public class Amane
 {
   public const string version = "0.1.0";
   public const string codename = "sumire";
   public const int chunkVersion = 1;
-
+  public static bool alive = true;
 
   static void Main(string[] args)
   {
@@ -35,7 +36,7 @@ public class Amane
     server.Start();
     Log.info("TCP Serverの起動が完了しました");
 
-    while (true)
+    while (alive)
     {
       string command = Console.ReadLine();
       switch (command.Split(" ")[0])
@@ -46,6 +47,7 @@ public class Amane
         case "say":
           var sayPacket = new SayPacket(command.Split(" ")[1]);
           server.SendToAll(sayPacket.packet);
+          Log.info(command.Split(" ")[1]);
           break;
       }
     }
@@ -56,5 +58,6 @@ public class Amane
     Log.info("タイマーを停止します");
     Clock.timer.Stop();
     Log.info("タイマーを停止しました");
+    alive = false;
   }
 }

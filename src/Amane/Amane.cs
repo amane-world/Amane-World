@@ -45,7 +45,7 @@ public class Amane
           Amane.exit();
           break;
         case "say":
-          var sayPacket = new SayPacket(command.Split(" ")[1]);
+          SayPacket sayPacket = new SayPacket(command.Split(" ")[1]);
           server.SendToAll(sayPacket.packet);
           Log.info(command.Split(" ")[1]);
           break;

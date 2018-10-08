@@ -5,7 +5,6 @@ using Time;
 using Network;
 using Packet;
 using dotenv.net;
-using fNbt;
 
 public class Amane
 {

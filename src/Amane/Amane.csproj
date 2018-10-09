@@ -10,6 +10,8 @@
   <ItemGroup>
     <PackageReference Include="dotenv.net" Version="1.0.3" />
     <PackageReference Include="Ether.Network" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Ripple.NetCore" Version="1.1.0" />
   </ItemGroup>
 
 </Project>

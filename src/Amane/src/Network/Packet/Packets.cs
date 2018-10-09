@@ -9,6 +9,6 @@ namespace Packet
   }
   public class ChunkPacket : Packet
   {
-    public ChunkPacket(int x, int y, int z, NbtTag tag) : base(0x22, $"{{\"Chunk X\":{x}, \"Chunk Y\":{y}, \"Chunk Z\":{z},\"Data\":{tag["Level"]["Blocks"]}}}") { }
+    public ChunkPacket(int x, int y, int z, string tag) : base(0x22, $"{{\"Chunk X\":{x}, \"Chunk Y\":{y}, \"Chunk Z\":{z},\"Data\":{tag}}}") { }
   }
 }

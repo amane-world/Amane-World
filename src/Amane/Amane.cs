@@ -5,6 +5,7 @@ using Time;
 using Network;
 using Packet;
 using dotenv.net;
+using System.Numerics;
 
 public class Amane
 {
@@ -35,6 +36,9 @@ public class Amane
     server.Start();
     Log.info("TCP Serverの起動が完了しました");
 
+    // var myFile = new fNbt.NbtFile();
+    // myFile.LoadFromFile("./world/awo/0.0.0.nbt.zlib");
+    // var myCompoundTag = myFile.RootTag;
     while (alive)
     {
       string command = Console.ReadLine();
@@ -48,6 +52,10 @@ public class Amane
           server.SendToAll(sayPacket.packet);
           Log.info(command.Split(" ")[1]);
           break;
+          // case "chunk":
+          //   ChunkPacket chunkPacket = new ChunkPacket(0, 0, 0, myCompoundTag.ToString());
+          //   server.SendToAll(chunkPacket.packet);
+          //   break;
       }
     }
   }
